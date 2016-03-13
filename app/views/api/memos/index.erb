@@ -1,0 +1,9 @@
+<h2>取得した座標</h2>
+<% @points.each do |point| %>
+    <p><%= point.lat %>,<%= point.long %></p>
+<% end %>
+<input type="button" value="テスト">
+
+<div style='width: 800px;'>
+  <div id="map" style='width: 800px; height: 400px;'></div>
+</div>
