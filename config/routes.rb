@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
   namespace :api, default: {format: :json} do
-    resources :memos, only: [:create, :show]
+    resources :memos, only: :create
   end
   root 'api/memos#index'
+  get 'api/memos/map'
   
 
   # The priority is based upon order of creation: first created -> highest priority.

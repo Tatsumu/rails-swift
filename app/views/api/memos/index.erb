@@ -7,39 +7,27 @@
             <h1>WHAT'S<small>&lt;HELPENは〜〜〜&gt;<small></h1>
         </div>
         <div class="whats-box">
-            <div class="row">
-                <div id="small-3 columns">
+            <!--<div class="row">-->
+                <div class="small-3 columns">
                     イラストが入る
                 </div>
-                <div id="small-5 columns">
+                <div class="small-5 columns">
                     HELPENの説明
                 </div>
             </div>
         </div>
     </section>
     <section id="how">
-        <div class="whats-title">
-            
+        <div class="how-title">
+            <h1>HOW<small>&lt;helpenは・・・&gt;<small></h1>
         </div>
-        <div class="whats-box">
-            
+        <div class="how-box">
+            <div id="small-3 columns">
+                アプリ画像
+            </div>
+            <div id="small-5 columns">
+                使い方
+            </div>
         </div>
     </section>
 </div>
-<h2>取得した座標</h2>
-    <% @points.each do |point| %>
-        <p><%= point.lat %>,<%= point.long %></p>
-    <% end %>
-<!--mapを表示-->
-<div style='width: 800px;'>
-  <div id="map" style='width: 800px; height: 400px;'></div>
-</div>
-
-<script type="text/javascript">
-    handler = Gmaps.build('Google');
-    handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
-      markers = handler.addMarkers(<%=raw @hash.to_json %>);
-      handler.bounds.extendWith(markers);
-      handler.fitMapToBounds();
-    });
-</script>
