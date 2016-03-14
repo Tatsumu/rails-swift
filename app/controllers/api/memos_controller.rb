@@ -9,7 +9,23 @@ class Api::MemosController < ApplicationController
   end
   
   def index
+    @points = Memo.all.limit('5')
+    @hash = Gmaps4rails.build_markers(@points) do |memo, marker|
+      marker.lat memo.lat
+      marker.lng memo.long
+      # marker.infowindow user.description
+      # marker.json({title: user.title})
+    end
+  end
+  
+  def show
     @points = Memo.all
+    @hash = Gmaps4rails.build_markers(@points) do |memo, marker|
+      marker.lat memo.lat
+      marker.lng memo.long
+      # marker.infowindow user.description
+      # marker.json({title: user.title})
+    end
   end
 
   private

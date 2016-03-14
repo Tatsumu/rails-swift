@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
   namespace :api, default: {format: :json} do
-    resources :memos, only: :create
+    resources :memos, only: [:create, :show]
   end
   root 'api/memos#index'
+  
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

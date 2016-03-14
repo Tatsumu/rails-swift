@@ -18,6 +18,7 @@ gem 'sprockets', '2.11.0'
 # 地図を使うライブラリ
 gem "gmaps4rails"
 gem "geocoder"
+gem 'underscore-rails'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
