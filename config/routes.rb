@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   end
   root 'api/memos#index'
   get 'api/memos/map'
+  get 'api/memos/res'
   
 
   # The priority is based upon order of creation: first created -> highest priority.

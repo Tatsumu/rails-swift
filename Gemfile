@@ -15,6 +15,8 @@ gem 'coffee-rails', '~> 4.1.0'
 # gem 'therubyracer', platforms: :ruby
 gem 'sprockets', '2.11.0'
 
+gem 'pry'
+
 # 地図を使うライブラリ
 gem "gmaps4rails"
 gem "geocoder"
